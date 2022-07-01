@@ -1,0 +1,5 @@
+first_name = input("enter your first name : ")
+last_name = input("Enter your last name : ")
+print(f"\nYour initials are : {first_name[0].upper()} {last_name[0].upper()}")
+print("address book : " + first_name[0].upper() + first_name[1:], last_name.upper())
+print("User name : " + first_name[0].lower() + last_name.lower())
