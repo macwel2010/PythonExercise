@@ -44,7 +44,13 @@ fre_list1 = []
 for i in fre_list:
     if i not in fre_list1:
         fre_list1.append(i)
-print(fre_list1)
+
+print("The 10 most common numbers by frequency are : ")
+for i in range(10):
+    print(fre_list1[i][1], end=" ")
+print("\nThe 10 least common numbers by frequency are : ")
+for i in range(len(fre_list1) - 1, len(fre_list1) - 11, -1):
+    print(fre_list1[i][1], end=" ")
 
 # print("\nnumber\tfrequency")
 # for i in range(len(fre_list) - 1):
