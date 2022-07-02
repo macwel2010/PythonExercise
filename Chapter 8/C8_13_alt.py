@@ -23,10 +23,8 @@ for i in range(len(numbers)):
 #         pb_dict[i] += 1
 #     else:
 #         pb_dict[i] = 1
-# print(pb_dict)
-# # pb_dict.sort()
-# sorted_dict = sorted(pb_dict.items(), key=lambda x: x[1], reverse=True)
-# print(sorted_dict)
+# # print(pb_dict)
+# pb_dict.sort()
 
 
 # frequency counter using list #
@@ -37,12 +35,21 @@ for i in range(len(pb_list)):
         for j in pb_list:
             if pb_list[i] == j:
                 count += 1
-        fre_list.append(pb_list[i])
-        fre_list.append(count)
-print("\nnumber\tfrequency")
-for i in range(len(fre_list) - 1):
-    if i % 2 == 0:
-        print(f"{fre_list[i]:>5} : {fre_list[i+1]:>5}")
+        fre_list.append([count, pb_list[i]])
+        # fre_list.append(count)
+fre_list.sort()
+fre_list.reverse()
+
+fre_list1 = []
+for i in fre_list:
+    if i not in fre_list1:
+        fre_list1.append(i)
+print(fre_list1)
+
+# print("\nnumber\tfrequency")
+# for i in range(len(fre_list) - 1):
+#     if i % 2 == 0:
+#         print(f"{fre_list[i]:>5} : {fre_list[i+1]:>5}")
 
 
 # myset = set(pb_list)
