@@ -1,5 +1,5 @@
 class Car:
-    def init(self, year_model, make, speed):
+    def init(self, year_model: str, make: str, speed):
         self.year_model = year_model
         self.make = make
         self.speed = 0
@@ -17,7 +17,7 @@ class Car:
 car = Car()
 car.year_model = input("Enter the year model of the car : ")
 car.make = input("Enter the make of the car : ")
-car.speed = int(input("enter the speed of the car : "))
+car.speed = input("enter the speed of the car : ")
 
 for i in range(5):
     car.accelerate(car.speed)
